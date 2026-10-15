@@ -1,33 +1,34 @@
 {
   "name": "torrent-discovery",
   "description": "Discover BitTorrent and WebTorrent peers",
-  "version": "9.4.10",
+  "version": "11.0.21",
   "author": {
     "name": "WebTorrent LLC",
     "email": "feross@webtorrent.io",
     "url": "https://webtorrent.io"
   },
   "browser": {
-    "bittorrent-dht/client": false,
+    "bittorrent-dht": false,
     "bittorrent-lsd": false
   },
   "chromeapp": {},
   "bugs": {
     "url": "https://github.com/webtorrent/torrent-discovery/issues"
   },
+  "type": "module",
   "dependencies": {
-    "bittorrent-dht": "^10.0.2",
-    "bittorrent-tracker": "^9.18.5",
-    "bittorrent-lsd": "^1.1.1",
-    "debug": "^4.3.3",
+    "bittorrent-dht": "^11.0.12",
+    "bittorrent-tracker": "^11.2.3",
+    "bittorrent-lsd": "^2.0.3",
+    "debug": "^4.4.3",
     "run-parallel": "^1.2.0"
   },
   "devDependencies": {
-    "@webtorrent/semantic-release-config": "1.0.7",
+    "@webtorrent/semantic-release-config": "1.0.11",
     "randombytes": "2.1.0",
-    "semantic-release": "17.4.7",
+    "semantic-release": "25.0.9",
     "standard": "*",
-    "tape": "5.5.3"
+    "tape": "5.10.3"
   },
   "keywords": [
     "webtorrent",
@@ -44,7 +45,12 @@
     "peer discovery"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "exports": {
+    "import": "./index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/webtorrent/torrent-discovery.git"
